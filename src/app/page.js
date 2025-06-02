@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Head from "next/head";
 import Link from "next/link";
+import Hero from "./components/hero";
 
 export default function Home() {
   return (
@@ -87,7 +88,6 @@ export default function Home() {
               </a>
             </div>
 
-            {/* Mobile menu button */}
             <button className="md:hidden text-gray-600">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -107,129 +107,7 @@ export default function Home() {
           </div>
         </nav>
 
-        {/* Hero Section - Modern gradient with floating elements */}
-        <section className="relative bg-gradient-to-br from-[#022057] via-[#006D90] to-[#00ABC6] text-white pt-32 pb-24 overflow-hidden">
-          <div className="absolute inset-0 opacity-10">
-            <div className="absolute top-0 left-0 w-full h-full bg-[url('/pattern-dots.svg')] bg-repeat opacity-20"></div>
-          </div>
-          <div className="container mx-auto px-6 relative z-10">
-            <div className="flex flex-col lg:flex-row items-center">
-              <div className="lg:w-1/2 mb-16 lg:mb-0">
-                <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
-                  Exceptional Dental Care{" "}
-                  <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00C6FB] to-[#00ABC6]">
-                    For Your Family
-                  </span>
-                </h1>
-                <p className="text-xl mb-8 max-w-lg opacity-90">
-                  Combining cutting-edge technology with compassionate care to
-                  create healthy, beautiful smiles that last a lifetime.
-                </p>
-                <div className="flex flex-col sm:flex-row gap-4">
-                  <Link
-                    href="#contact"
-                    className="bg-white hover:bg-gray-100 text-[#022057] font-medium py-3 px-8 rounded-lg transition-all shadow-lg hover:shadow-xl text-center transform hover:-translate-y-1"
-                  >
-                    Book Appointment
-                  </Link>
-                  <Link
-                    href="tel:+15551234567"
-                    className="border-2 border-white hover:bg-white hover:text-[#022057] font-medium py-3 px-8 rounded-lg transition-all text-center transform hover:-translate-y-1"
-                  >
-                    <span className="flex items-center justify-center">
-                      <svg
-                        className="w-5 h-5 mr-2"
-                        fill="none"
-                        stroke="currentColor"
-                        viewBox="0 0 24 24"
-                      >
-                        <path
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          strokeWidth="2"
-                          d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
-                        />
-                      </svg>
-                      (555) 123-4567
-                    </span>
-                  </Link>
-                </div>
-                <div className="mt-10 flex items-center space-x-6">
-                  <div className="flex -space-x-3">
-                    {[1, 2, 3].map((item) => (
-                      <div
-                        key={item}
-                        className="w-10 h-10 rounded-full border-2 border-white overflow-hidden"
-                      >
-                        <Image
-                          src={`/patient-${item}.jpg`}
-                          alt={`Happy patient ${item}`}
-                          width={40}
-                          height={40}
-                          className="w-full h-full object-cover"
-                        />
-                      </div>
-                    ))}
-                  </div>
-                  <div>
-                    <div className="flex items-center">
-                      {[...Array(5)].map((_, i) => (
-                        <svg
-                          key={i}
-                          className="w-5 h-5 text-yellow-400"
-                          fill="currentColor"
-                          viewBox="0 0 20 20"
-                        >
-                          <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                        </svg>
-                      ))}
-                    </div>
-                    <p className="text-sm mt-1 opacity-80">
-                      500+ 5-star reviews from happy patients
-                    </p>
-                  </div>
-                </div>
-              </div>
-              <div className="lg:w-1/2 lg:pl-12 relative">
-                <div className="relative rounded-2xl overflow-hidden shadow-2xl transform rotate-1 hover:rotate-0 transition-transform duration-300">
-                  <Image
-                    src="/dental-clinic-interior.jpg"
-                    alt="BrightSmile Dental Clinic"
-                    width={800}
-                    height={600}
-                    className="w-full h-auto rounded-lg"
-                  />
-                  <div className="absolute -bottom-6 -right-6 bg-white p-4 rounded-xl shadow-xl">
-                    <div className="flex items-center">
-                      <div className="bg-[#00ABC6] p-2 rounded-lg mr-3">
-                        <svg
-                          className="w-6 h-6 text-white"
-                          fill="none"
-                          stroke="currentColor"
-                          viewBox="0 0 24 24"
-                        >
-                          <path
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                            strokeWidth="2"
-                            d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"
-                          />
-                        </svg>
-                      </div>
-                      <div>
-                        <p className="font-bold text-[#022057]">Open Today</p>
-                        <p className="text-gray-600 text-sm">
-                          8:00 AM - 7:00 PM
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className="absolute bottom-0 left-0 right-0 h-24 bg-white transform skew-y-3 -mb-12 z-0"></div>
-        </section>
+        <Hero />
 
         {/* About Us Section - Modern with floating stats */}
         <section id="about" className="py-24 bg-white relative">
