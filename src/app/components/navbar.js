@@ -167,10 +167,3 @@ export default function Navbar() {
   );
 }
 
-{
-  /* <iframe
-  height="430"
-  width="350"
-  src="https://bot.dialogflow.com/67ef9f51-5618-41f3-a59b-a7c2f9605cee"
-></iframe>; */
-}
