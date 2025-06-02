@@ -3,6 +3,7 @@ import Head from "next/head";
 import Link from "next/link";
 import Hero from "./components/hero";
 import Navbar from "./components/navbar";
+import AboutUs from "./components/aboutUs";
 
 export default function Home() {
   return (
@@ -41,103 +42,7 @@ export default function Home() {
         {/* Navigation - Modern sticky header */}
         <Navbar />
         <Hero />
-
-        {/* About Us Section - Modern with floating stats */}
-        <section id="about" className="py-24 bg-white relative">
-          <div className="container mx-auto px-6">
-            <div className="flex flex-col lg:flex-row items-center">
-              <div className="lg:w-1/2 mb-16 lg:mb-0 lg:pr-12 relative">
-                <div className="relative rounded-2xl overflow-hidden shadow-xl">
-                  <Image
-                    src="/dentist-team.jpg"
-                    alt="Our Dental Team"
-                    width={600}
-                    height={400}
-                    className="rounded-lg w-full"
-                  />
-                </div>
-                <div className="absolute -bottom-8 -left-8 bg-[#022057] text-white p-6 rounded-xl shadow-xl w-64">
-                  <p className="text-3xl font-bold mb-2">15+</p>
-                  <p className="text-[#00ABC6] font-medium">
-                    Years of Experience
-                  </p>
-                </div>
-              </div>
-              <div className="lg:w-1/2">
-                <span className="text-[#00ABC6] font-semibold tracking-wider">
-                  ABOUT OUR CLINIC
-                </span>
-                <h2 className="text-3xl md:text-4xl font-bold text-[#022057] mt-2 mb-6 leading-tight">
-                  Compassionate Care with Cutting-Edge Technology
-                </h2>
-                <p className="text-gray-600 mb-8 text-lg leading-relaxed">
-                  At BrightSmile Dental, we blend modern dental technology with
-                  a warm, patient-centered approach. Our team of board-certified
-                  dentists and hygienists are dedicated to providing
-                  personalized care in a comfortable environment.
-                </p>
-
-                <div className="grid grid-cols-2 gap-6 mb-8">
-                  {[
-                    {
-                      icon: "👨‍⚕️",
-                      title: "Expert Dentists",
-                      description:
-                        "Board-certified professionals with specialized training",
-                    },
-                    {
-                      icon: "🏥",
-                      title: "Modern Facility",
-                      description:
-                        "State-of-the-art equipment for precise diagnostics",
-                    },
-                    {
-                      icon: "💳",
-                      title: "Flexible Payments",
-                      description: "Multiple financing options available",
-                    },
-                    {
-                      icon: "🚗",
-                      title: "Easy Parking",
-                      description: "Free dedicated parking for all patients",
-                    },
-                  ].map((item, index) => (
-                    <div
-                      key={index}
-                      className="bg-gray-50 p-4 rounded-lg hover:shadow-md transition-shadow"
-                    >
-                      <span className="text-2xl mb-2 block">{item.icon}</span>
-                      <h4 className="font-bold text-[#022057]">{item.title}</h4>
-                      <p className="text-gray-600 text-sm">
-                        {item.description}
-                      </p>
-                    </div>
-                  ))}
-                </div>
-
-                <Link
-                  href="#about"
-                  className="inline-flex items-center text-[#00ABC6] font-medium hover:text-[#0294b0] group transition-colors"
-                >
-                  Learn more about our practice
-                  <svg
-                    className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth="2"
-                      d="M14 5l7 7m0 0l-7 7m7-7H3"
-                    />
-                  </svg>
-                </Link>
-              </div>
-            </div>
-          </div>
-        </section>
+        <AboutUs />
 
         {/* Why Choose Us Section - Unique value proposition */}
         <section id="why-us" className="py-24 bg-gray-50">

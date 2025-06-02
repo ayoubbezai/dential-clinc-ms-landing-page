@@ -46,7 +46,7 @@ export default function Navbar() {
         className={`fixed w-full z-50 transition-all duration-300 ${
           isScrolled
             ? "bg-white backdrop-blur-md shadow-sm py-2"
-            : "bg-white backdrop-blur-sm py-4"
+            : "bg-white backdrop-blur-sm py-3"
         }`}
       >
         <div className="container mx-auto px-6 flex justify-between items-center">
@@ -57,12 +57,12 @@ export default function Navbar() {
             <motion.div
               whileHover={{ rotate: 360 }}
               transition={{ duration: 0.6 }}
-              className="w-40 h-30 rounded-lg bg-white flex items-center justify-center mr-3"
+              className="w-10 h-10 rounded-lg bg-white flex items-center justify-center mr-2"
             >
               <Image
                 src={logo}
                 alt="Chebaani Dental Logo"
-                width={40}
+                width={30}
                 height={30}
               />
             </motion.div>
@@ -165,4 +165,12 @@ export default function Navbar() {
       </motion.div>
     </>
   );
+}
+
+{
+  /* <iframe
+  height="430"
+  width="350"
+  src="https://bot.dialogflow.com/67ef9f51-5618-41f3-a59b-a7c2f9605cee"
+></iframe>; */
 }
