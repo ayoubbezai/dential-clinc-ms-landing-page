@@ -101,7 +101,7 @@ export default function Hero() {
                   className="relative z-10"
                   whileHover={{ scale: 1.05 }}
                 >
-                  Book Appointment
+                  Contact Us
                 </motion.span>
                 <motion.div
                   className="absolute inset-0 bg-gradient-to-r from-[#00C6FB] to-[#00ABC6] opacity-0 group-hover:opacity-10"

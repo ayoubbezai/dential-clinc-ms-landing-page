@@ -2,6 +2,7 @@ import Image from "next/image";
 import Head from "next/head";
 import Link from "next/link";
 import Hero from "./components/hero";
+import Navbar from "./components/navbar";
 
 export default function Home() {
   return (
@@ -38,75 +39,7 @@ export default function Home() {
 
       <div className="min-h-screen bg-white">
         {/* Navigation - Modern sticky header */}
-        <nav className="bg-white shadow-sm py-4 sticky top-0 z-50">
-          <div className="container mx-auto px-6 flex justify-between items-center">
-            <Link
-              href="/"
-              className="text-2xl font-bold flex items-center text-[#022057]"
-            >
-              <div className="w-10 h-10 rounded-lg bg-gradient-to-r from-[#022057] to-[#00ABC6] flex items-center justify-center mr-3">
-                <Image
-                  src="/tooth-icon-white.svg"
-                  alt="Chebaani Dental Logo"
-                  width={20}
-                  height={20}
-                />
-              </div>
-              Chebaani Clinic
-            </Link>
-
-            <div className="hidden md:flex space-x-8 items-center">
-              <Link
-                href="#about"
-                className="text-gray-600 hover:text-[#00ABC6] transition-colors font-medium"
-              >
-                About Us
-              </Link>
-              <Link
-                href="#services"
-                className="text-gray-600 hover:text-[#00ABC6] transition-colors font-medium"
-              >
-                Services
-              </Link>
-              <Link
-                href="#dentists"
-                className="text-gray-600 hover:text-[#00ABC6] transition-colors font-medium"
-              >
-                Our Dentists
-              </Link>
-              <Link
-                href="#why-us"
-                className="text-gray-600 hover:text-[#00ABC6] transition-colors font-medium"
-              >
-                Why Choose Us
-              </Link>
-              <a
-                href="https://ayoubbezai.site/login"
-                className="bg-gradient-to-r from-[#022057] to-[#00ABC6] hover:from-[#011842] hover:to-[#0294b0] text-white font-medium py-2 px-6 rounded-lg transition-all shadow-md hover:shadow-lg"
-              >
-                Admin Panel
-              </a>
-            </div>
-
-            <button className="md:hidden text-gray-600">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                className="h-6 w-6"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M4 6h16M4 12h16M4 18h16"
-                />
-              </svg>
-            </button>
-          </div>
-        </nav>
-
+        <Navbar />
         <Hero />
 
         {/* About Us Section - Modern with floating stats */}
